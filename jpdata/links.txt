@@ -1,0 +1,6 @@
+MDN Javascript Operator Precedence Table
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+Statements VS Expressions
+
+  https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74
