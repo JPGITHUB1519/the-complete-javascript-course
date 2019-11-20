@@ -4,3 +4,10 @@ MDN Javascript Operator Precedence Table
 Statements VS Expressions
 
   https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74
+
+How Javascript Works behind the scenes explained
+
+  https://medium.com/@sharangohar/how-javascript-works-behind-the-scenes-fb65b81d6e1c
+
+  Summary from the Course:
+    https://saegeullee.com/the-complete-javascript-course-section3-how-javascript-works-behind-the-scene/

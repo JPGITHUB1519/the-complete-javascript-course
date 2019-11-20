@@ -1,0 +1,41 @@
+Execution Context
+Global Execution Context
+Execution Stack
+Execution Context Object
+    - Variable Object (VO)
+    - Scope Chain
+    - This Variable
+
+    * Creation Phase
+        - Creation of the Variable Object (VO)
+        - Creation of the Scope Chain
+        - Determine the value of the this variable
+    * Execution Phase
+        The code of the function that generated the current execution context is ran line by line
+Hoisting
+    For functions:
+        - We can declare the function later and use it first in our code.  But this only works with function declaration.
+            Not with function Expressions
+
+    For Variables:
+        - In the creation phase of the variable object the variables are scanned for variable declarations and are set to undefined.
+    
+    In summary the hoisting is important because we can use function declaration before we declare them in our code.
+
+Scoping
+    Answer the question where we can access a certain variable
+The Scope Chain
+Lexical Scoping
+Execution Stack vs ScopeChain:
+    - Execution Stack: Order in which the functions are called
+    - Escope Chain: Order in which functions are written lexically
+
+
+Each time we call a function it creates a new execution context and when the function returns it pop off 
+from the execution stack
+
+The This Variable
+    - Regular function call: the this keyword points to the global object(window object)
+    - Method call: the this variable points to the object is calling the Method
+    - The this keyword is not assigned a value until a functio where it is defined is actually called 
+        (This is because the Execution Context is not created yet);
