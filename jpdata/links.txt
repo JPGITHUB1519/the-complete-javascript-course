@@ -11,3 +11,12 @@ How Javascript Works behind the scenes explained
 
   Summary from the Course:
     https://saegeullee.com/the-complete-javascript-course-section3-how-javascript-works-behind-the-scene/
+
+Scope and ScopeChain
+
+
+DOM Element Method and Properties:
+  https://www.w3schools.com/jsref/dom_obj_all.asp
+
+Event Reference:
+  https://developer.mozilla.org/en-US/docs/Web/Events
