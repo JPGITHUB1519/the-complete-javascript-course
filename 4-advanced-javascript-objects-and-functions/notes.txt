@@ -1,0 +1,6 @@
+Everything is an object in javascript, well almost....
+- Contructor
+- Inheritance
+- Prototype
+- Prototypal Inheritance
+Javascript is not a clased-based language instead is a prototype based language

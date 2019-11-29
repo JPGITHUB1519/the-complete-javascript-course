@@ -1,0 +1,27 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+
+
+.action-buttons button {
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.action-buttons button:first-of-type {
+  margin-left: 0;
+}

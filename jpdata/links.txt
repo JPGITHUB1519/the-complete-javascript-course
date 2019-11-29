@@ -20,3 +20,21 @@ DOM Element Method and Properties:
 
 Event Reference:
   https://developer.mozilla.org/en-US/docs/Web/Events
+
+Methods Within Constructor vs Prototype in Javascript
+  https://www.thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/
+
+  Excellent explanation on the Q&A section:
+    https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/5869182#questions/2856176
+
+Javascript Inheritance:
+  https://www.tutorialsteacher.com/javascript/inheritance-in-javascript
+  https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
+  https://www.freecodecamp.org/news/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0/
+  http://adripofjavascript.com/blog/drips/basic-inheritance-with-javascript-constructors.html
+  http://adripofjavascript.com/blog/drips/basic-inheritance-with-object-create.html
+
+Primitives vs Objects:
+
+  https://itnext.io/javascript-interview-prep-primitive-vs-reference-types-62eef165bec8
+  https://miro.medium.com/max/2400/1*G8i-f2AqE01X-9utn4hPNA.png (good image sample)
