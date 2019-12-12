@@ -38,3 +38,6 @@ Primitives vs Objects:
 
   https://itnext.io/javascript-interview-prep-primitive-vs-reference-types-62eef165bec8
   https://miro.medium.com/max/2400/1*G8i-f2AqE01X-9utn4hPNA.png (good image sample)
+
+Module Pattern
+  https://coryrylan.com/blog/javascript-module-pattern-basics
