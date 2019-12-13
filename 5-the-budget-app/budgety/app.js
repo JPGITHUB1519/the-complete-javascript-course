@@ -232,10 +232,8 @@ var controller = (function(budgetCtrl, UICtrl) {
       // 4. Clear the fields
       UICtrl.clearFields();
 
-      // 5. Calculate and update the Budget
+      // 5. Calculate, update and Display the budget on the UI
       updateBuget();
-
-      // 6. Display the budget on the UI
     }
   };
 
