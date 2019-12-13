@@ -27,7 +27,17 @@ var budgetController = (function() {
     totals: {
       exp: 0,
       inc: 0
-    }
+    },
+    budget: 0,
+    percentage: -1
+  };
+
+  var calculateTotal = function(type) {
+    var sum = 0;
+    data.allItems[type].forEach(function(cur) {
+      sum += cur.value;
+    });
+    data.totals[type] = sum;
   };
 
   return {
@@ -54,6 +64,31 @@ var budgetController = (function() {
 
       // Return new Item
       return newItem;
+    },
+
+    calculateBudget: function() {
+      // Calculate tota income and expenses
+      calculateTotal('exp');
+      calculateTotal('inc');
+      
+      // Calculate the budget: income- expenses
+      data.budget = data.totals.inc - data.totals.exp;
+
+      // Calculate the percentage of income we spent
+      if (data.totals.inc > 0) {
+        data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+      } else {
+        data.percentage = -1;
+      }
+    },
+
+    getButget: function() {
+      return {
+        budget: data.budget,
+        totalInc: data.totals.inc,
+        totalExp: data.totals.exp,
+        percentage: data.percentage
+      }
     },
 
     testing: function() {
@@ -153,10 +188,13 @@ var controller = (function(budgetCtrl, UICtrl) {
 
   var updateBuget = function() {
     // 1. Calculate Budget
+    budgetCtrl.calculateBudget();
 
     // 2. Return the budget
+    var budget = budgetCtrl.getButget();
 
     // 3. Display the budget on the UI
+    console.log(budget);
   }
 
   var ctrlAddItem = function() {
@@ -169,7 +207,7 @@ var controller = (function(budgetCtrl, UICtrl) {
     // data validation
     if (input.description !== "" && !isNaN(input.value) && input.value > 0) {
       // 2. Add the item to the budget controller
-      newItem = budgetController.addItem(input.type, input.description, input.value);
+      newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
       // 3. Add the item to the UI
       UICtrl.addListItem(newItem, input.type);
@@ -181,7 +219,7 @@ var controller = (function(budgetCtrl, UICtrl) {
       updateBuget();
 
       // 6. Display the budget on the UI
-      }
+    }
   };
 
   return {
