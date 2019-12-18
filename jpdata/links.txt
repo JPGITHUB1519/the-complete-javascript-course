@@ -41,3 +41,9 @@ Primitives vs Objects:
 
 Module Pattern
   https://coryrylan.com/blog/javascript-module-pattern-basics
+
+Event Delegation
+  https://medium.com/@bretdoucette/part-4-what-is-event-delegation-in-javascript-f5c8c0de2983
+
+Dom Traversing
+  https://zellwk.com/blog/dom-traversals/
