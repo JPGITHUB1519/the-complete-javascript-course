@@ -100,7 +100,7 @@ var budgetController = (function() {
       }
     },
 
-    getButget: function() {
+    getBudget: function() {
       return {
         budget: data.budget,
         totalInc: data.totals.inc,
@@ -164,6 +164,17 @@ var UIController = (function() {
       document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
     },
 
+    deleteListItem: function(selectorID) {
+      // remove Element from the dom;
+      /* 
+        Basically the DOM does not support removing an object directly. 
+        You have to go to its parent and remove it from there. 
+        Javascript won't let an element commit suicide, but it does permit infanticide (XD JOKE)
+      */
+      var el = document.getElementById(selectorID);
+      el.parentNode.removeChild(el);
+    },
+
     getDomstrings: function() {
       return DOMstrings;
     },
@@ -223,12 +234,12 @@ var controller = (function(budgetCtrl, UICtrl) {
     document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
   }
 
-  var updateBuget = function() {
+  var updateBudget = function() {
     // 1. Calculate Budget
     budgetCtrl.calculateBudget();
 
     // 2. Return the budget
-    var budget = budgetCtrl.getButget();
+    var budget = budgetCtrl.getBudget();
 
     // 3. Display the budget on the UI
     UICtrl.displayBudget(budget);
@@ -253,7 +264,7 @@ var controller = (function(budgetCtrl, UICtrl) {
       UICtrl.clearFields();
 
       // 5. Calculate, update and Display the budget on the UI
-      updateBuget();
+      updateBudget();
     }
   };
 
@@ -275,8 +286,10 @@ var controller = (function(budgetCtrl, UICtrl) {
       budgetCtrl.deleteItem(type, ID);
 
       // 2. Delete the item from the UI
+      UICtrl.deleteListItem(itemID);
 
       // 3. Update and show the new budget
+      updateBudget();
     }
 
   }
