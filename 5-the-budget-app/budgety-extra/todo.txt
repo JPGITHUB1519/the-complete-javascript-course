@@ -1,0 +1,9 @@
+- Persitent data storage
+- Remove negative sign when the budget total counter in on 0
+- Refactor app to multiple files with a better documents structure
+- Dark Mode
+- Add income percentage
+- Graph Representing the Income / Expenses
+- Show count of incomes / expenses below the table
+- Quick shorcut to change between Income and Expenses on Form
+- Improve million support

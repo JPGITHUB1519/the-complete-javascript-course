@@ -27,6 +27,9 @@ Methods Within Constructor vs Prototype in Javascript
   Excellent explanation on the Q&A section:
     https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/5869182#questions/2856176
 
+Classes:  
+  https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript
+
 Javascript Inheritance:
   https://www.tutorialsteacher.com/javascript/inheritance-in-javascript
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
@@ -47,3 +50,7 @@ Event Delegation
 
 Dom Traversing
   https://zellwk.com/blog/dom-traversals/
+
+Modules
+  https://www.youtube.com/watch?v=cRHQNNcYf6s
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
