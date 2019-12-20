@@ -1,5 +1,6 @@
 import modelModule from './model.js';
 import viewModule from './view.js';
+import { USE_LOCAL_STORAGE } from './constants.js';
 
 // Global APP Controller
 // the modelModule and the UI are separate modules and should not communicate each other
@@ -99,16 +100,40 @@ var controller = (function(model, view) {
 
   }
 
+  // Sync the data with localStorage and Update the UI
+  var loadDataFromLocalStorage = function() {
+    model.syncDataFromLocalStorage();
+
+    var incomes = model.getIncomes();
+    var expenses = model.getExpenses();
+
+    incomes.forEach(function(value) {
+      view.addListItem(value, 'inc');
+    });
+
+    expenses.forEach(function(value) {
+      view.addListItem(value, 'exp');
+    });
+
+    updateBudget();
+    updatePercentages();
+  };
+
   return {
     init: function() {
       console.log('Application has started');
+      if (USE_LOCAL_STORAGE) {
+        loadDataFromLocalStorage();
+      } else {
+        view.displayBudget({
+          budget: 0,
+          totalInc: 0,
+          totalExp: 0,
+          percentage: -1
+        });
+      }
+
       view.displayMonth();
-      view.displayBudget({
-        budget: 0,
-        totalInc: 0,
-        totalExp: 0,
-        percentage: -1
-      })
       setupEventListeners();
     },
   }
