@@ -1,4 +1,6 @@
-- Persitent data storage
+- Remove data from localStore (Hard Reset)
+- Import / Export data from JSON
+- Responsive Design
 - Remove negative sign when the budget total counter in on 0
 - Dark Mode
 - Add income percentage
@@ -10,3 +12,4 @@
 
 Done:
   - Refactor app to multiple files with a better documents structure
+  - Persitent data storage
