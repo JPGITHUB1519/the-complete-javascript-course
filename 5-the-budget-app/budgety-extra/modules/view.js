@@ -16,7 +16,8 @@ var viewModule = (function() {
     percentageLabel: '.budget__expenses--percentage',
     container: '.container',
     expensesPercLabel: '.item__percentage',
-    dateLabel: '.budget__title--month'
+    dateLabel: '.budget__title--month',
+    hardResetBtn: '.hard-reset-button'
   };
 
   return {
@@ -78,6 +79,26 @@ var viewModule = (function() {
 
       // Set the focus to the first element
       fieldsArr[0].focus();
+    },
+
+    clearIncomes: function() {
+      document.querySelector(DOMstrings.incomeContainer).innerHTML = "";
+    },
+
+    clearExpenses: function() {
+      document.querySelector(DOMstrings.expensesContainer).innerHTML = "";
+    },
+
+    clearItems: function() {
+      this.clearIncomes();
+      this.clearExpenses();
+      document.querySelector(DOMstrings.inputDescription).focus();
+      this.displayBudget({
+        budget: 0,
+        totalInc: 0,
+        totalExp: 0,
+        percentage: -1
+      });
     },
 
     displayBudget: function(obj) {

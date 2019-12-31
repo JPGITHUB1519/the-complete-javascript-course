@@ -12,15 +12,23 @@ var controller = (function(model, view) {
     document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
 
     document.addEventListener('keypress', function(event) {
-
       // which is for older browser
       if (event.keyCode === 13 || event.which === 13) {
         ctrlAddItem();
       }
     });
 
+    // ESC key does not work for keypress event. So this is a fix for that
+    // for more info look on https://github.com/electron/electron/issues/2264
+    document.addEventListener('keyup', function(event) {
+      if (event.keyCode === 27 || event.which === 27) {
+        view.clearFields();
+      }
+    });
+
     document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
     document.querySelector(DOM.inputType).addEventListener('change', view.changedType);
+    document.querySelector(DOM.hardResetBtn).addEventListener('click', ctrlHardReset);
   }
 
   var updateBudget = function() {
@@ -97,8 +105,12 @@ var controller = (function(model, view) {
       // 4. Calculate and update percentages
       updatePercentages();
     }
-
   }
+
+  var ctrlHardReset = function() {
+    view.clearItems();
+    model.hardResetData();
+  };
 
   // Sync the data with localStorage and Update the UI
   var loadDataFromLocalStorage = function() {

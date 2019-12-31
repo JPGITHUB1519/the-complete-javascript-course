@@ -27,7 +27,7 @@ var modelModule = (function() {
     this.value = value;
   };
 
-  var data = {
+  var defaultDataTemplate = {
     allItems: {
       exp: [],
       inc: []
@@ -39,6 +39,8 @@ var modelModule = (function() {
     budget: 0,
     percentage: -1
   };
+
+  var data = defaultDataTemplate;
 
   var calculateTotal = function(type) {
     var sum = 0;
@@ -52,33 +54,24 @@ var modelModule = (function() {
   var getDataFromLocalStorage = function() {
     var localStorageData = JSON.parse(localStorage.getItem('data'));
 
-    var newData = {
-      allItems: {
-        exp: [],
-        inc: []
-      },
-      totals: {
-        exp: 0,
-        inc: 0
-      },
-      budget: 0,
-      percentage: -1
-    };
+    var newData = defaultDataTemplate;
 
-    // create new constructor object from the localStorage in order to preserve methods
-    localStorageData.allItems.inc.forEach(function(income) {
-      //addItem('inc', income.description, income.value);
-      newData.allItems.inc.push(new Income(income.id, income.description, income.value));
-    });
-
-    localStorageData.allItems.exp.forEach(function(expense) {
-      //addItem('exp', expense.description, expense.value);
-      newData.allItems.exp.push(new Expense(expense.id, expense.description, expense.value));
-    });
-
-    newData.totals = localStorageData.totals;
-    newData.budget = localStorageData.budget;
-    newData.percentage = localStorageData.percentage;
+    if (localStorageData) {
+      // create new constructor object from the localStorage in order to preserve methods
+      localStorageData.allItems.inc.forEach(function(income) {
+        //addItem('inc', income.description, income.value);
+        newData.allItems.inc.push(new Income(income.id, income.description, income.value));
+      });
+  
+      localStorageData.allItems.exp.forEach(function(expense) {
+        //addItem('exp', expense.description, expense.value);
+        newData.allItems.exp.push(new Expense(expense.id, expense.description, expense.value));
+      });
+  
+      newData.totals = localStorageData.totals;
+      newData.budget = localStorageData.budget;
+      newData.percentage = localStorageData.percentage;      
+    }
     
     return newData;
   };
@@ -139,6 +132,12 @@ var modelModule = (function() {
           updateLocalStorageData();
         }
       }
+    },
+
+    hardResetData: function() {
+      var newData = defaultDataTemplate;
+      data = newData;
+      localStorage.clear();
     },
 
     calculateBudget: function() {

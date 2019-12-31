@@ -8,8 +8,11 @@
 - Show count of incomes / expenses below the table
 - Quick shorcut to change between Income and Expenses on Form
 - Improve million support
-
+- Deploy app to production
+- Show no data when there is not income / expenses
 
 Done:
   - Refactor app to multiple files with a better documents structure
   - Persitent data storage
+  - Clean Fields data on ESC key
+
