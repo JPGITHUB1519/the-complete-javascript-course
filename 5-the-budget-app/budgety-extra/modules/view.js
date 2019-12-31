@@ -101,6 +101,18 @@ var viewModule = (function() {
       });
     },
 
+    changeType: function(type) {
+      var inputTypeSelect = document.querySelector(DOMstrings.inputType);
+
+      if (type == 'inc') {
+        inputTypeSelect.selectedIndex = 0;
+      } else if (type === 'exp') {
+        inputTypeSelect.selectedIndex = 1;
+      }
+
+      this.changedType();
+    },
+
     displayBudget: function(obj) {
       var type;
 

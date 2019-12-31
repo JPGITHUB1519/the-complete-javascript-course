@@ -1,4 +1,3 @@
-- Remove data from localStore (Hard Reset)
 - Import / Export data from JSON
 - Responsive Design
 - Remove negative sign when the budget total counter in on 0
@@ -6,7 +5,6 @@
 - Add income percentage
 - Graph Representing the Income / Expenses
 - Show count of incomes / expenses below the table
-- Quick shorcut to change between Income and Expenses on Form
 - Improve million support
 - Deploy app to production
 - Show no data when there is not income / expenses
@@ -15,4 +13,8 @@ Done:
   - Refactor app to multiple files with a better documents structure
   - Persitent data storage
   - Clean Fields data on ESC key
+  - Remove data from localStore and from View (Hard Reset)
+  - Quick shorcut to change between Income and Expenses on Form (ctrl shorcut)
+
+
 

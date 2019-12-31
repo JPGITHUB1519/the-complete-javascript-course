@@ -24,6 +24,11 @@ var controller = (function(model, view) {
       if (event.keyCode === 27 || event.which === 27) {
         view.clearFields();
       }
+
+      // Ctrl detect for changing income / expense type
+      if (event.keyCode === 17 || event.which == 17) {
+        ctrlChangeType();
+      }
     });
 
     document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
@@ -106,6 +111,13 @@ var controller = (function(model, view) {
       updatePercentages();
     }
   }
+
+  var ctrlChangeType = function() {
+    var actualTypeValue = view.getInput().type;
+
+    var newType = actualTypeValue == 'inc' ? 'exp' : 'inc';
+    view.changeType(newType);
+  };
 
   var ctrlHardReset = function() {
     view.clearItems();
