@@ -54,3 +54,10 @@ Dom Traversing
 Modules
   https://www.youtube.com/watch?v=cRHQNNcYf6s
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+ES6 tutorial
+  https://www.javascripttutorial.net/es6/
+
+ES6 const and let 
+  https://www.javascripttutorial.net/es6/javascript-let/
+  https://www.javascripttutorial.net/es6/difference-between-var-and-let/
