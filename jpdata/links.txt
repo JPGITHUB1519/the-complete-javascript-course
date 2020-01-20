@@ -64,3 +64,6 @@ ES6 const and let
 
 ES6 Arrow functions
   https://zendev.com/2018/10/01/javascript-arrow-functions-how-why-when.html
+
+self = this hack
+  https://stackoverflow.com/questions/962033/what-underlies-this-javascript-idiom-var-self-this
