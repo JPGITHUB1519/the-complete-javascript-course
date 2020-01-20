@@ -61,3 +61,6 @@ ES6 tutorial
 ES6 const and let 
   https://www.javascripttutorial.net/es6/javascript-let/
   https://www.javascripttutorial.net/es6/difference-between-var-and-let/
+
+ES6 Arrow functions
+  https://zendev.com/2018/10/01/javascript-arrow-functions-how-why-when.html
