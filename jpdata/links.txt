@@ -21,6 +21,9 @@ DOM Element Method and Properties:
 Event Reference:
   https://developer.mozilla.org/en-US/docs/Web/Events
 
+Nodelist To Array
+  https://hackernoon.com/htmlcollection-nodelist-and-array-of-objects-da42737181f9
+
 Methods Within Constructor vs Prototype in Javascript
   https://www.thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/
 
