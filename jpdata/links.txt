@@ -35,6 +35,7 @@ Classes:
 
 Javascript Inheritance:
   https://www.tutorialsteacher.com/javascript/inheritance-in-javascript
+  https://www.javascripttutorial.net/es6/javascript-inheritance/
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
   https://www.freecodecamp.org/news/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0/
   http://adripofjavascript.com/blog/drips/basic-inheritance-with-javascript-constructors.html

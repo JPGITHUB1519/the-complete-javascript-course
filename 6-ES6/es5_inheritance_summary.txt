@@ -1,0 +1,16 @@
+Inheritance summary on ES5
+
+ParentClass: Person
+Subclass: Athlete
+
+1- On the Subclass parent contructor you should call the parent contructor with the call method
+
+  Person.call(this, name, yearOfBirth, job);
+
+2- Assign the Prototype of the Subclass to a instance of the Object.create(ParentConstructor):
+  Athlete.prototype = Object.create(Person.prototype);
+
+
+
+Concepts:
+  Object.create() -> method used to create a new object with the specified prototype
