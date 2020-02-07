@@ -28,8 +28,11 @@ var Athlete5 = function(name, yearOfBirth, job, olympicGames, medals) {
 };
 
 // subclass extends superclass
-Athlete5.prototype = Object.create(Person5.prototype);
+Athlete5.prototype = Object.create(Person5.prototype); //same as Athlete5.prototype = new Person5();
+// IMPORTANT!, without this our object will be created as a Person5() instead an Athelete5, on Chrome this do not happen
+Athlete5.prototype.constructor = Athlete5;
 
+// Always put the new methods after inherit the prototype
 // Methods specific to the Athlete 5
 Athlete5.prototype.wonMedal = function() {
   this.medals++;

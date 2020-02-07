@@ -14,3 +14,9 @@ Subclass: Athlete
 
 Concepts:
   Object.create() -> method used to create a new object with the specified prototype
+
+
+Prototype VS __proto__
+
+  In reality, the only true difference between prototype and __proto__ is that the former is a property of a class constructor,
+   while the latter is a property of a class instance.
