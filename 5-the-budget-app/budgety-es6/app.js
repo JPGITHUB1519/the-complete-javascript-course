@@ -119,7 +119,7 @@ const budgetController = (() => {
     },
 
     getPercentages: () => {
-      var allPerc = data.allItems.exp.map(cur => cur.getPercentage());
+      const allPerc = data.allItems.exp.map(cur => cur.getPercentage());
       
       return allPerc;
     },
@@ -160,7 +160,7 @@ const UIController = (() => {
   };
 
 
-  var formatNumber = (num, type) => {
+  const formatNumber = (num, type) => {
     let numSplit;
     let int;
     let dec;
@@ -173,15 +173,15 @@ const UIController = (() => {
     dec = numSplit[1];
 
     if (int.length > 3) {
-      int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, 3);
+      int = `${int.substr(0, int.length - 3)}, ${int.substr(int.length - 3, 3)}`;
     }
 
-    return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;  
+    return (type === 'exp' ? '-' : '+') + `${int}.${dec}`;  
   };
 
 
-  var nodeListForEach = (list, callback) => {
-    for (var i = 0; i < list.length; i++) {
+  const nodeListForEach = (list, callback) => {
+    for (let i = 0; i < list.length; i++) {
       callback(list[i], i);
     }
   };
@@ -342,7 +342,7 @@ const UIController = (() => {
 // the model and the UI are separate modules and should not communicate each other
 // this controller is for join the model and the UI
 const controller = ((budgetCtrl, UICtrl) => {
-  var setupEventListeners = () => {
+  const setupEventListeners = () => {
     const DOM = UICtrl.getDomstrings();
 
     document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
@@ -358,7 +358,7 @@ const controller = ((budgetCtrl, UICtrl) => {
     document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
   }
 
-  var updateBudget = () => {
+  const updateBudget = () => {
     // 1. Calculate Budget
     budgetCtrl.calculateBudget();
 
@@ -369,7 +369,7 @@ const controller = ((budgetCtrl, UICtrl) => {
     UICtrl.displayBudget(budget);
   }
 
-  var updatePercentages = () => {
+  const updatePercentages = () => {
     // 1. Calculate Percentages
     budgetCtrl.calcPercentages();
     
@@ -406,7 +406,7 @@ const controller = ((budgetCtrl, UICtrl) => {
     }
   };
 
-  var ctrlDeleteItem = event => {
+  const ctrlDeleteItem = event => {
     let itemID;
     let SplitID;
     let type;
