@@ -114,19 +114,17 @@ const budgetController = (() => {
       }
     },
 
-    calcPercentages: function() {
-      data.allItems.exp.forEach(function(cur) {
-        cur.calcPercentage(data.totals.inc);
-      });
+    calcPercentages: () => {
+      data.allItems.exp.forEach(cur => cur.calcPercentage(data.totals.inc));
     },
 
-    getPercentages: function() {
+    getPercentages: () => {
       var allPerc = data.allItems.exp.map(cur => cur.getPercentage());
       
       return allPerc;
     },
 
-    getBudget: function() {
+    getBudget: () => {
       return {
         budget: data.budget,
         totalInc: data.totals.inc,
@@ -182,14 +180,14 @@ const UIController = (() => {
   };
 
 
-  var nodeListForEach = function(list, callback) {
+  var nodeListForEach = (list, callback) => {
     for (var i = 0; i < list.length; i++) {
       callback(list[i], i);
     }
   };
 
   return {
-    getInput: function() {
+    getInput: () => {
       return {
         type: document.querySelector(DOMstrings.inputType).value,  // will be either inc or exp,
         description: document.querySelector(DOMstrings.inputDescription).value,
