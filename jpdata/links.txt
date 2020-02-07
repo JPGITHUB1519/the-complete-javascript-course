@@ -41,6 +41,9 @@ Javascript Inheritance:
   http://adripofjavascript.com/blog/drips/basic-inheritance-with-javascript-constructors.html
   http://adripofjavascript.com/blog/drips/basic-inheritance-with-object-create.html
 
+Prototype VS __proto__
+  https://medium.com/javascript-in-plain-english/proto-vs-prototype-in-js-140b9b9c8cd5 
+
 Primitives vs Objects:
 
   https://itnext.io/javascript-interview-prep-primitive-vs-reference-types-62eef165bec8
