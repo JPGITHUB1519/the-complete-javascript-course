@@ -77,3 +77,18 @@ ES6 Arrow functions
 
 self = this hack
   https://stackoverflow.com/questions/962033/what-underlies-this-javascript-idiom-var-self-this
+
+
+Synchronous / Asynchronous Javascript
+  https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous
+
+Web APIS
+
+  https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction
+
+Callback Hell
+  http://callbackhell.com/    (This article is very cool!)
+
+Check if callback exists
+
+  https://stackoverflow.com/questions/21010143/execute-callbackobj-if-callback-exists-else-return-object
