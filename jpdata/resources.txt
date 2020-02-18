@@ -1,0 +1,2 @@
+https://javascript.info/ -> Good Tutorial with exercises!
+https://www.javascripttutorial.net/es6/

@@ -92,3 +92,9 @@ Callback Hell
 Check if callback exists
 
   https://stackoverflow.com/questions/21010143/execute-callbackobj-if-callback-exists-else-return-object
+
+Promises
+  https://javascript.info/promise-basics
+  
+Async / Await
+  https://javascript.info/async-await
