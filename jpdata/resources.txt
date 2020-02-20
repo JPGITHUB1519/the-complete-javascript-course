@@ -1,2 +1,9 @@
 https://javascript.info/ -> Good Tutorial with exercises!
+
 https://www.javascripttutorial.net/es6/
+
+Weather API
+  https://www.metaweather.com/api/
+
+Cors Anywhere
+  https://cors-anywhere.herokuapp.com/

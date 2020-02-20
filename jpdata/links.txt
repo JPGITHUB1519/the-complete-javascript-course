@@ -98,3 +98,9 @@ Promises
   
 Async / Await
   https://javascript.info/async-await
+
+CORS 
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+
+CORS Proxy
+  https://jeremyliberman.com/2019/02/11/fetch-has-been-blocked-by-cors-policy.html#does-a-cors-policy-block-the-request-from-reaching-my-server
