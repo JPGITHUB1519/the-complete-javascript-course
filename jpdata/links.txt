@@ -108,3 +108,9 @@ CORS Proxy
 Linux Sheat Sheet
 
   https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/
+
+Webpack configuration
+  https://webpack.js.org/configuration/
+
+Modern Javascript Setup
+  https://www.robinwieruch.de/javascript-project-setup-tutorial

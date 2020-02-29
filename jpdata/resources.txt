@@ -7,3 +7,9 @@ Weather API
 
 Cors Anywhere
   https://cors-anywhere.herokuapp.com/
+
+Modern Javascript Setup (Backend and Frontend) IMPORTANTTTTTTTTTTTTTTTTTTTT!
+  https://www.robinwieruch.de/javascript-project-setup-tutorial
+
+Advanced Webpack:
+  https://www.robinwieruch.de/webpack-advanced-setup-tutorial
