@@ -1,15 +1,14 @@
-// App Controller
+import axios from 'axios';
 
-// default import
-import str from './models/Search';
+async function getResults(query) {
+  try {
+    const res = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${query}`);
+    const recipes = res.data.recipes;
+    console.log(recipes);
+  } catch(error) {
+    alert(error);
+  }
+}
 
-// name import
-import { add as sum, multiply, ID } from './views/searchView';
+getResults('pizza');
 
-import * as searchView from './views/searchView';
-
-console.log(str);
-console.log(sum(2, 3));
-console.log(ID);
-
-console.log(`Using exported functions! ${searchView.add(searchView.ID, 2)} and ${searchView.multiply(3, 5)}, ${str}`)
