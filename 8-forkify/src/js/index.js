@@ -1,4 +1,5 @@
 import Search from './models/Search';
+import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
@@ -13,6 +14,9 @@ const state = {
 
 };
 
+/**
+ * Search Controller
+ */
 const controlSearch = async () => {
   // 1) Get query from the view
   const query = searchView.getInput();
@@ -44,7 +48,7 @@ elements.searchForm.addEventListener('submit', e => {
 // Event delegation
 elements.searchResPages.addEventListener('click', e => {
   const btn = e.target.closest('.btn-inline');
-  
+
   if (btn) {
     const goToPage = parseInt(btn.dataset.goto, 10);
     searchView.clearResults();
@@ -52,7 +56,10 @@ elements.searchResPages.addEventListener('click', e => {
   }
 });
 
-// const search = new Search('pizza');
-// console.log(search);
-// search.getResults();
+/**
+ * Recipe Controller
+ */
 
+const r = new Recipe(46892);
+r.getRecipe();
+console.log(r);

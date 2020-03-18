@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { testConfig } from '../config';
 
 export default class Search {
   constructor(query) {
